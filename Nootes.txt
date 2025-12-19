@@ -129,9 +129,35 @@ in pakage.json
 
 "your server running on 3000"
 
+*local host gets your iP address automatically thats why we use it 
 
 
+---HTTP request
 
+*it is when we request through an Ip is called HTTPS request
+
+---HTTP methods
+
+*this include:
+
+get:to retrieve response data from this source(by default it in browser search bar)
+post:to send data to server(submit data) usually in form of object
+put:update the entire data object
+delete:to delete the object data
+patch:it also update it with partially (like changing phone number only)
+
+---.get() request
+
+*.get takes "end point" as its first parameter in our case we provide "/"
+
+*.get takes a call back functiona as seconf argument
+
+*callback function has 2 parameters (request,response)
+
+*request has data when user hit the source like frontend data
+*response include data to be drnd when there eis get request
+
+*res.send() method we use to give dummy data to show in our app
 
 
 
