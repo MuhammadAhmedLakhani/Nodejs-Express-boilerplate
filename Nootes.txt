@@ -1,0 +1,127 @@
+
+---Nodejs
+
+*Javascript was once only a front-end language
+*It was basically a designed to run on browser engine only 
+(like v8 engine in chrome browser for running javascript)
+*Nodejs comes in market after 2009
+
+*Nodejs is runtime envirnment that enable to run javascript without need of browser 
+*nodejs is asyncronous and does not wait for things to be done
+(like fetching data from api) , it can run other code while some other
+task is being done backwards and does not wait at all for completion of one task
+
+*Nodejs is "single threaded" 
+
+*request of data or any task recieved by thread and another request
+of some other task will not be entertain until first one completed and its
+gets free
+*this is single threading
+
+
+---event loop
+
+*whenever there is a task that is require to be done/execute ,a 
+que(line) is formed in callstack which is  execution stack containing
+ tasks to be execute  in a que.
+ 
+*normally whatever is enter in hte que execute first then its later ones
+
+*but there is a prioritywise execution machanism
+
+*there is  Taskque(also called callback que) and microtask que
+*"microtask" que has more priority than a simple "Task" que
+
+*if you run a promise and setTimeout for asyncronous tasks,then in this scenario
+the promise has more priority than setTimeout even if then runs at same time
+,even if you put setTimeOut before Promise still Promise runs and prints
+first
+
+--types of apps
+
+*There are two types of apps:
+
+1)IO-Intensive Apps
+2)CPU Intensive Apps
+
+*for IO intensive Apps Nodejs is used
+*for CPU Intensive app java or backend technologies runs
+
+*CPU Intensive apps are hardware intensive apps like photoshop
+or afteraffect sofware which need gpus are CPU intensive apps
+
+*IO intensive used for basic getting and displaying data, it also use
+CPU but not extensively as other one
+
+
+*Node also has pakage manager which a directory storing all Node 
+related pakages needed to use in projects
+
+*always install LTS version to install Nodejs as it is most stable version
+
+---using node to runn javascript file
+
+*with command "node index.js" you can run javascript inside terminal
+
+*in the way above you only have run the javascript file not the actual backend app
+
+
+---using node to run backend app
+
+
+*you need to make server and allot it the space in your system through
+assigning "port" to  run specific server.
+
+*as each device has a seprate IP address so this address is assign 
+to the port in heich the server will run
+
+*but as we run multiple server/application in one device and IPaddress is same
+*in this situation we assign portnumber after IP address to seprate the each application
+
+for example "192.168.0.133:port"
+
+*to run your server in port you need a pakage which is called "HTTP"
+
+but there are some issues with HTTP pakage
+
+--issues if http:
+
+1)it uses pure node which means you need to write alot of code to use
+2)to responsive a servrer request we also need to write alot of code again
+
+---Expressjs
+
+*here comes express.js framework which helps us to make server effiicemtly
+*it is use to make servrs and also ca be use to other tasks usually which
+is done my node which are quite lenghty
+
+*you need pakage.json for details about project like names , 
+dependencies for distinguishing project
+
+*the command for creating pakage.json file is "npm init"
+
+*after making pakage.json now add start command under script tags:
+  "start": "node index.js"
+
+*this will enable you to use "npm start" and using it will run your index.js file
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+  
