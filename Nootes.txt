@@ -106,6 +106,30 @@ dependencies for distinguishing project
 *this will enable you to use "npm start" and using it will run your index.js file
 
 
+now install express framework using command:
+
+npm i express
+
+*you can use modules like imort/export in node as well which is supported here
+
+----initializing express
+
+
+*the express function you import from "express" will return its features whch you save in 
+*but need to mention 
+"type":"modules"
+in pakage.json
+
+
+*app.listen lets you create port ,it takes IP address automatically but port name must be given like(3000,4000,8000)
+
+*.listen also take a call back function as its parameters
+
+*after starting your app you will see the console printing
+
+"your server running on 3000"
+
+
 
 
 
