@@ -159,9 +159,26 @@ patch:it also update it with partially (like changing phone number only)
 
 *res.send() method we use to give dummy data to show in our app
 
+*to avoid re running your project again and again for changes to be detected install pakage called nodemon 
+
+*nodemon will erstart the server whenever therer is sny changes in app data
 
 
+*post request from console as browser only accepts  get 
+request
 
+*posts request from server was complicated with fetch method
+
+*to make things smooth another software is used call postman which simplifies all these concepts 
+
+
+*simply download it and  select rewuest type enter url of api to hit and it will bring the results quickly
+
+*you can also make new nevie=ronment to avoid typing ue=rl again and again 
+
+*just make environment with associated variable and url.  and in your workspace select the environment in our case its url and value is https:localhost:3000 
+
+*the use it {{url}} select get request and boom you get the daata
 
 
  
