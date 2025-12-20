@@ -38,12 +38,38 @@ let users = [];
 
 app.post("/user",(req,res )=>{
 
-    users.push( {...req.body , id : users.length + 1})
-    console.log("users",users)
+    let id = new Date().getTime(36) 
+
+
+    users.push( {...req.body , id : id})
+   
     res.send({user: req.body , message:"User Added uscessfully"})
 })    
 
 
+
+//delete request
+
+
+
+
+app.delete("/user/:id",(req,res)=>{
+    
+    const {id} =  req.params
+
+    
+
+
+
+  users = users.filter((obj)=>{
+        return obj.id !==  Number(id)
+    })
+
+    console.log("users",users)
+
+
+    res.send("deleted user sucessfully")
+})
 
 
 
