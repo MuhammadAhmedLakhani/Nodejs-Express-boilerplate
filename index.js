@@ -9,36 +9,41 @@ const app = express()
 app.use(express.json())
 
 
-
-console.log("running app")
-
-
-app.get("/",(req,res)=>{
-    res.send("Hello Node")
-})
-app.get("/users",(req,res)=>{
-    res.send(
-      {...users , id : users.length + 1}
-    )
-})
-
-
-let users = []; 
-
-
-app.post("/user",(req,res )=>{
-
-    console.log("res",req.body)
-    users.push(req.body)
-    res.send({user: req.body , message:"User Added uscessfully"})
-})
-
-
-
+//setting up server on port
 
 app.listen(3000,()=>{
     console.log("your server is running on 3000")
 })
+
+
+
+///get request
+
+
+app.get("/",(req,res)=>{
+    res.send("Hello Node")
+})    
+app.get("/users",(req,res)=>{
+    res.send(
+        users
+    )    
+})    
+
+
+//initializing empty array
+
+let users = []; 
+
+//post request
+
+app.post("/user",(req,res )=>{
+
+    users.push( {...req.body , id : users.length + 1})
+    console.log("users",users)
+    res.send({user: req.body , message:"User Added uscessfully"})
+})    
+
+
 
 
 
