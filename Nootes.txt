@@ -181,7 +181,20 @@ request
 *the use it {{url}} select get request and boom you get the daata
 
 
- 
+ --middelware
+
+ we we console the req of our post request it contain alot of info 
+
+ *if we want body info then undefined as server doesnot know that the requested data is in json formate
+
+ for this purpose we need another middelware which express framework provide which is json()
+
+ we initialize it inside app.use method
+
+
+ now server receives the body(what was sent through post request)
+
+
 
 
 

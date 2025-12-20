@@ -1,7 +1,14 @@
 
-import express from "express";
+import express, { json } from "express";
 
 const app = express()
+
+
+//adding middleware which is express itself
+
+app.use(express.json())
+
+
 
 console.log("running app")
 
@@ -17,7 +24,12 @@ app.get("/users",(req,res)=>{
 })
 
 
+let users = []; 
+
+
 app.post("/posts",(req,res )=>{
+
+    console.log("res",req.body)
     res.send({message:"Post Request received"})
 })
 
@@ -27,6 +39,60 @@ app.post("/posts",(req,res )=>{
 app.listen(3000,()=>{
     console.log("your server is running on 3000")
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
