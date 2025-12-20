@@ -18,7 +18,7 @@ app.get("/",(req,res)=>{
 })
 app.get("/users",(req,res)=>{
     res.send(
-      users
+      {...users , id : users.length + 1}
     )
 })
 
