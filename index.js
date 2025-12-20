@@ -17,20 +17,20 @@ app.get("/",(req,res)=>{
     res.send("Hello Node")
 })
 app.get("/users",(req,res)=>{
-    res.send({
-        name:"Muhammad Ahmed raza  ",
-        email:"ahmed@gmail.com"
-    })
+    res.send(
+      users
+    )
 })
 
 
 let users = []; 
 
 
-app.post("/posts",(req,res )=>{
+app.post("/user",(req,res )=>{
 
     console.log("res",req.body)
-    res.send({message:"Post Request received"})
+    users.push(req.body)
+    res.send({user: req.body , message:"User Added uscessfully"})
 })
 
 
